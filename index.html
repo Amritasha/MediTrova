@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Oculin : URL Shortner</title>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+
+    <!-- Custom -->
+    <script type="text/javascript" src="js/valid.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body >
+
+<div class="container-fluid">
+
+    <div class="row" >
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style="margin: 0px;">
+            <h1> &gt; Ocul.in &lt; </h1>
+        </div>
+        <div class="col-nd-2"></div>
+    </div>
+
+	<div class="row"  style="margin: 15px">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="input-group  input-group-lg ">
+      			<input type="url"  id="url" class="form-control input-lg" value="http://"  required /><br>
+      			<span class="input-group-btn">
+        			<button id="btn" class="btn input-lg" type="button" onclick="go();" >Shrink URL</button>
+      			</span>
+    		</div>
+        <br>
+            <label for="basic-url">Custom URL :</label>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="basic-addon3">http://ocul.in/</span>
+                <input type="text" id="custom" class="form-control input" placeholder="(Optional)" id="basic-url" aria-describedby="basic-addon3" onkeyup="ajaxFunction();">
+            </div>
+            <div id="disp"></div>
+        </div>
+    	<div class="col-md-2"></div>
+    </div>
+
+    <div class="row"  style="margin: 10px">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" style=" margin=0; padding: 30px; padding-bottom: 5px;">  
+            <span id="final" >
+            <div class="alert alert-success " role="alert">
+            <label  for="basic-url" style="align: center">DONE! YOU'VE CREATED YOUR OCULINK</label>
+            <div  class="input-group  input-group-lg ">
+                    <input type="text"  id="fin" class="form-control input-lg js-copytextarea" /><br>
+                    <span class="input-group-btn">
+                        <button id="cpy" class="btn input-lg js-textareacopybtn" type="button" onclick="copy()">COPY</button>
+                    </span>
+            </div>
+            </div>
+            </span>
+            <textarea id="hi" class="js-copyinput" style="display: none;" ></textarea>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row sp"></div>
+
+</div>
+
+<hr>
+
+<footer class="footer footer-modified">
+    <div class="row">
+    <div class="col-md-12">  
+        <p class="company">&copy; 2016 Ocul.in&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/Oculin-URL-Shortner-1638276333100459"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/oculinshortner"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/u/0/107396256550514423253?hl=en"><i class="fa fa-google-plus"></i></a>
+            <a href="#mail" data-toggle="modal" ><i class="fa fa-envelope" style="color: #FFFFFF;"></i></a> 
+        </div>
+    </div>
+    </div>
+</footer>
+
+  <!-- Modal -->
+<div class="modal fade bs-example-modal-sm" id="mail" role="dialog">
+<div class="modal-dialog modal-sm">
+<!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button> 
+            <h4 class="modal-title">Mail Us @</h4>
+        </div>
+        <div class="modal-body">
+            <p>OculinShortner@gmail.com</p>
+        </div>
+    </div>   
+</div>
+</div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
