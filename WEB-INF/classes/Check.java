@@ -36,7 +36,7 @@ public class Check extends HttpServlet {
         String redir = request.getHeader("referer"); // Yes, with the legendary misspelling.
 
         if(!redir.equals(homeURL)){
-            out.println(redir);
+            //out.println(redir);
                 //    response.sendError(HttpServletResponse.SC_NOT_FOUND); // 404 page not found
         }
         else{
@@ -57,6 +57,10 @@ public class Check extends HttpServlet {
             catch (Exception e){
              // out.println("Got an exception! ");
               out.println("Invalid URL");
+            }
+            finally{
+                
+                out.close();
             }
         }
    }

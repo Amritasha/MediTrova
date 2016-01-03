@@ -115,11 +115,15 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
                 else{
                     out.println("Custom URL not availble");
                 }
+             conn.close();   
             }
             catch(Exception e){
                 response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // 404 page not found
                 //out.println("Got an exception! ");
                 //out.println(e.getMessage());
+            }
+            finally{                
+                
             }
         }
         out.close();
