@@ -57,8 +57,8 @@ public class urlFilter implements Filter{
                 conn.close();
             }
             catch (Exception e){
-              out.println("Got an exception! yo2 ");
-              out.println(e);
+              out.println("Some internal problem has occured!");
+              //out.println(e);
             }
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.html");
             requestDispatcher.include(request, response);

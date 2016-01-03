@@ -34,7 +34,7 @@ public class Redirect extends HttpServlet {
 
         String path = requestURL.substring(homeURL.length()+2,requestURL.length());
         // +2 cos homeurl/go/* go=2 word; 1st / is included in home
-        out.print("<html><h2>"+path+"</h2></html>");
+        //out.print("<html><h2>"+path+"</h2></html>");
 
         String ipAddress = request.getHeader("X-FORWARDED-FOR");
         if(ipAddress == null){
@@ -90,7 +90,7 @@ public class Redirect extends HttpServlet {
         }
         catch (Exception e){
           out.println("Got an exception! ");
-          out.println(e.getMessage());
+         // out.println(e.getMessage());
         }
         finally {
             // very imp to close
