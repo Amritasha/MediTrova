@@ -118,12 +118,9 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
              conn.close();   
             }
             catch(Exception e){
-                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // 404 page not found
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 //out.println("Got an exception! ");
                 //out.println(e.getMessage());
-            }
-            finally{                
-                
             }
         }
         out.close();

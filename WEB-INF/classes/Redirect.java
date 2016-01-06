@@ -82,15 +82,17 @@ public class Redirect extends HttpServlet {
                     response.sendRedirect(org_url);
                 }
                 catch (Exception e){
-                  out.println("Got an exception! ");
-                  out.println(e.getMessage());
+                    response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                  //out.println("Got an exception! ");
+                  //out.println(e.getMessage());
                 }
             }
             conn.close();
         }
         catch (Exception e){
-          out.println("Got an exception! ");
-          out.println(e.getMessage());
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            //out.println("Got an exception! ");
+            //out.println(e.getMessage());
         }
         finally {
             // very imp to close
