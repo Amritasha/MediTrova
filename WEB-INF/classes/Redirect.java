@@ -83,14 +83,14 @@ public class Redirect extends HttpServlet {
                 }
                 catch (Exception e){
                   out.println("Got an exception! ");
-                  //out.println(e.getMessage());
+                  out.println(e.getMessage());
                 }
             }
             conn.close();
         }
         catch (Exception e){
           out.println("Got an exception! ");
-         // out.println(e.getMessage());
+          out.println(e.getMessage());
         }
         finally {
             // very imp to close
