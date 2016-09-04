@@ -10,19 +10,19 @@
     </init-param>
     <init-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:mysql:///m</param-value>
+        <param-value>jdbc:mysql://127.3.181.2:3306/</param-value>
     </init-param>
     <init-param>
         <param-name>jdbcUser</param-name>
-        <param-value>root</param-value>
+        <param-value>adminLBSMcgM</param-value>
     </init-param>
     <init-param>
         <param-name>jdbcPass</param-name>
-        <param-value>admin</param-value>
+        <param-value>MhMCJ6ebmsJU</param-value>
     </init-param>
     <init-param>
         <param-name>homeURL</param-name>
-        <param-value>http://localhost:8080/</param-value>
+        <param-value>http://ocul.in/</param-value>
     </init-param>
     <init-param>
         <param-name>homeURI</param-name>
@@ -30,10 +30,6 @@
     </init-param>
 
     </filter>
-
-
-
-
     <filter-mapping>
         <filter-name>fill</filter-name>
         <url-pattern>/*</url-pattern>
@@ -45,7 +41,6 @@
         <servlet-name>Redirect</servlet-name>
         <servlet-class>Redirect</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Redirect</servlet-name>
         <url-pattern>/go/*</url-pattern>
@@ -72,17 +67,17 @@
 
 
     <error-page>
-        <error-code>400</error-code>
-        <location>/error/Error400.html</location>
-    </error-page>
-    <error-page>
         <error-code>404</error-code>
         <location>/error/Error404.html</location>
     </error-page>
     <error-page>
         <error-code>405</error-code>
         <location>/error/Error405.html</location>
-    </error-page>    
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/error/Error400.html</location>
+    </error-page>
     <error-page>
         <error-code>500</error-code>
         <location>/error/Error500.html</location>
@@ -99,19 +94,19 @@
     </context-param>
     <context-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:mysql:///m</param-value>
+        <param-value>jdbc:mysql://127.3.181.2:3306/</param-value>
     </context-param>
     <context-param>
         <param-name>jdbcUser</param-name>
-        <param-value>root</param-value>
+        <param-value>adminLBSMcgM</param-value>
     </context-param>
     <context-param>
         <param-name>jdbcPass</param-name>
-        <param-value>admin</param-value>
+        <param-value>MhMCJ6ebmsJU</param-value>
     </context-param>
     <context-param>
         <param-name>homeURL</param-name>
-        <param-value>http://localhost:8080/</param-value>
+        <param-value>http://ocul.in/</param-value>
     </context-param>
     <context-param>
         <param-name>homeURI</param-name>

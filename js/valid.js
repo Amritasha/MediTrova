@@ -112,7 +112,7 @@ function go() {
 
 
 function validURL(str) {
-    if(str.indexOf("http://")==0 || str.indexOf("https://")==0 || str.indexOf("www.")==0 || str.indexOf("http://")==0 || str.indexOf("ftp://")==0 ){
+    if(str.indexOf("http://")==0 || str.indexOf("https://")==0 || str.indexOf("www.")==0){
         return true;
     }
     else{
@@ -134,6 +134,7 @@ function validcustom(str1){
 
     if(!x){
         document.getElementById("disp").innerHTML= "Custom URL may contain letters, numbers, and dashes only.";
+
     }
 
     return x;
@@ -166,7 +167,7 @@ function display(str){
 
     document.getElementById("final").visibility="none";
 
-    document.getElementById("url").value = "http://";
+    document.getElementById("url").value = "";
     document.getElementById("custom").value = "";
     document.getElementById("disp").innerHTML = "";
 
