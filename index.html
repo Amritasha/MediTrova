@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Oculin : URL Shortner</title>
+    <title>MediTrova</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +10,13 @@
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <meta name="revisit-after" content="1 days">
-    <meta name="robots" content="index,follow">
-    <meta name="keywords" content="URL, shortner, link, share, friends, oculin, ocul, social, online, marketing, largest, world, POWER OF THE LINK, measure, optimize, customized, optimize, smart, worldwide"/> 
-    <meta name="application-name" content="Oculin : URL Shortner">
-    <meta name="title" content="Oculin : URL Shortner">
-    <meta name="description" content="Make your links manageable and sharable on social media with Billions of available custom URLs and faster redirection.">
-
+ 
     <meta name="google-site-verification" content="zvAfRhmf0o4mxQOYDa2kSzfek7IY8LCZYzOgaWA8rSQ" />
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- CSS -->
     <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -32,7 +25,22 @@
     <script type="text/javascript" src="js/valid.js"></script>
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="shortcut icon" href="https://dl.dropboxusercontent.com/s/vg50qfs9a6wvcxk/ocul_favicon.ico?dl=0" type="image/png">
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+
+ <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+
+
+    <!-- Custom -->
 
 </head>
 
@@ -40,74 +48,99 @@
 
 <div class="container-fluid">
 
-    <div class="row" >
+<br>
+ <div class="row" >
         <div class="col-md-2"></div>
         <div class="col-md-8" style="margin: 0px;">
-            <h1 class="titl"> &gt; Ocul.in &lt; </h1>
+            <h1 class="titl" style="font-size:100px;"><span>Medi</span><span style="color: gold;">Trova</span></h1>
         </div>
         <div class="col-nd-2"></div>
     </div>
 
-	<div class="row"  style="margin: 15px">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
-			<div class="input-group  input-group-lg ">
-      			<input type="url"  id="url" class="form-control input-lg" placeholder="http://" required /><br>
-      			<span class="input-group-btn">
-        			<button id="btn" class="btn input-lg" type="button" onclick="go();" >Shrink URL</button>
-      			</span>
-    		</div>
-        <br>
-            <label for="basic-url">Custom URL :</label>
-            <div class="input-group input-group-lg">
-                <span class="input-group-addon" id="basic-addon3">http://ocul.in/</span>
-                <input type="text" id="custom" class="form-control input" placeholder="(Optional)" id="basic-url" aria-describedby="basic-addon3" onkeyup="ajaxFunction();">
-            </div>
-            <div id="disp"></div>
-        </div>
-    	<div class="col-md-2"></div>
-    </div>
 
-    <div class="row"  style="margin: 10px">
+
+<br>
+
+<div class="row"  style="margin: 15px">
         <div class="col-md-2"></div>
-        <div class="col-md-8" style=" margin=0; padding: 30px; padding-bottom: 5px;">  
-            <span id="final" >
-            <div class="alert alert-success " role="alert">
-            <label  for="basic-url" style="align: center">DONE! YOU'VE CREATED YOUR OCULINK</label>
-            <div  class="input-group  input-group-lg ">
-                    <input type="text"  id="fin" class="form-control input-lg js-copytextarea" /><br>
-                    <span class="input-group-btn">
-                        <button id="cpy" class="btn input-lg js-textareacopybtn" type="button" onclick="copy()">COPY</button>
-                    </span>
+        <div class="col-md-8">
+            <div class="input-group  input-group-lg ">
+                <input input type="file" name="fname" id="fname" class="form-control input-lg" required /><br>
+                <span class="input-group-btn">
+                    <button id="btn" class="btn input-lg" type="button" onclick="go()">Find</button>
+                </span>
             </div>
-            </div>
-            </span>
-            <textarea id="hi" class="js-copyinput" style="display: none;" ></textarea>
-        </div>
+<br>
+<br>
+<br>
+
+        
+            <div id="map" style="width: 500px; height: 400px;"></div>
+     
         <div class="col-md-2"></div>
     </div>
 
-    <div class="row sp"></div>
+<br>
+<br>
+
+<br>
+<br>
+
+<div class="container" style="margin:50px;">
+    <div class="col-sm-12">
+    <div class="col-sm-6">
+            <label for="quantity">Name</label>
+        </div>
+        <div class="col-sm-6">
+            <label for="quantity">Opening Time</label>
+        </div>
+    <div class="col-sm-6">
+            <input type="email" class="form-control" id="vname">          
+        </div>
+        <div class="col-sm-6">
+            <input type="email" class="form-control" id="vtime">          
+        </div>
+        <div class="col-sm-6">
+            <label for="medicine">Medicine:</label> 
+        </div>
+        <div class="col-sm-3">
+            <label for="quantity">Quantity:</label>
+        </div>
+        <div class="col-sm-3"> 
+            <label for="prize">Prize:</label>
+        </div>
+        
+    </div>
+    <div class="col-sm-12">
+    
+        <div class="col-sm-6">
+            <input type="email" class="form-control" id="vmed">          
+        </div>
+        <div class="col-sm-3">
+            <input type="email" class="form-control" id="vquant">
+        </div>
+        <div class="col-sm-3"> 
+            <input type="email" class="form-control" id="vprize">
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+<div class="container">
+<div class="container">
+<div class="col-sm-4"><button class="btn" type="submit" value="upload!" onclick="store()">Submit</button></div>
+<div class="col-sm-4"><div id="tick" width="50px" height="50px"></div></div>
+</div>
+
+<br>
+<br>
+
+
+
 
 </div>
-<br><br>
 
 <hr>
-
-<footer class="footer footer-modified">
-    <div class="row">
-    <div class="col-md-12">  
-        <p class="company">&copy; 2016 Ocul.in&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
-        <div class="footer-icons">
-            <a href="https://www.facebook.com/sameergupta1812" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/guptasameer1812" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://in.linkedin.com/in/sameer-gupta-68761b107" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/sameer-gupta" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="#mail" data-toggle="modal"><i class="fa fa-envelope" style="color: #FFFFFF;"></i></a>
-        </div>
-    </div>
-    </div>
-</footer>
 
   <!-- Modal -->
 <div class="modal fade bs-example-modal-sm" id="mail" role="dialog">
@@ -126,5 +159,26 @@
 </div>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+
+
+
+
+<footer class="footer footer-modified">
+    <div class="row">
+    <div class="col-md-12">  
+        <p class="company">&copy; 2016 Ocul.in&nbsp;&nbsp;&nbsp;All Rights Reserved.</p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/sameergupta1812" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/guptasameer1812" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://in.linkedin.com/in/sameer-gupta-68761b107" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/sameer-gupta" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="#mail" data-toggle="modal"><i class="fa fa-envelope" style="color: #FFFFFF;"></i></a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+
+
 </body>
 </html>

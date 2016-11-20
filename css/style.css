@@ -9,6 +9,9 @@ body {
   
 }
 
+.titl{
+	font-family: 'Baloo', cursive;
+}
 
 .form-control:focus {
 	 border-color: #1FA67A;
@@ -96,7 +99,6 @@ hr {
 
 
 #url, #btn {
-    height: 58px;
     font-size: 22px;
    
 }
@@ -121,41 +123,14 @@ hr {
 	letter-spacing: 1px;
 }
 
-
-@media (max-width: 379px) {
-	.titl{
-		font-size: 50px;
-	}
-}
-@media (min-width: 380px) and (max-width: 449px) {
-	.titl{
-		font-size: 80px;
-	}
-}
-@media (min-width: 450px) and (max-width: 624px) {
-	.titl{
-		font-size: 100px;
-	}
-}
-@media (min-width: 625px) and (max-width: 799px) {
-	.titl{
-		font-size: 150px;
-	}
-	.btn{
-		height: 40px;
-	}
-}
-@media (min-width: 800px){
-	.titl{
-		font-size: 190px;
-	}
-	.btn{
-		height: 58px;
-	}
 }
 
 a, a:focus, a:hover, a:active {
 	outline: 0;
 	border-color: red;
 	text-decoration: none;
+}
+
+.hideit{
+	display: none;
 }
